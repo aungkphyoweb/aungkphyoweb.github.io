@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student Registration</h1>
+    <form action="request.php" method="get">
+        <label for="name">Name</label>
+        <input type="text" name="student_name" id="name">
+        <br><br>
+        <label for="email">Email</label>
+        <input type="text" name="student_email" id="email">
+        <br><br>
+        <label for="phone">Phone</label>
+        <input type="number" name="student_phone" id="phone">
+        <br><br>
+        <label for="password">Password</label>
+        <input type="password" name="student_password" id="password">
+        <br><br>
+        <label for="dob">Date of Birth</label>
+        <input type="date" name="student_dob" id="dob">
+        <br><br>
+        <label for="passport">Passport Image</label>
+        <input type="file" accept="" name="student_passport" id="passport">
+        <br><br>
+        <label for="year">Years</label>
+        <select name="student_year" id="year">
+            <option value="">Choose your year</option>
+            <option value="First">First Year</option>
+            <option value="Second">Second Year</option>
+            <option value="Third">Third Year</option>
+            <option value="First">First Year</option>
+            <option value="First">First Year</option>
+        </select>
+        <br><br>
+        <label for="">Gender</label>
+        <br><br>
+        <input type="radio" name="gender" id="male" value="Male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="Female">
+        <label for="female">Female</label>
+        <br><br>
+        <label for="">Hobby</label>
+        <br><br>
+        <input type="checkbox" name="travelling" id="travelling" value="Travelling">
+        <label for="travelling">Travelling</label>
+        <input type="checkbox" name="gaming" id="gaming" value="Gaming">
+        <label for="gaming">Gaming</label>
+        <input type="checkbox" name="reading" id="reading" value="Reading">
+        <label for="reading">Reading</label>
+        <br><br>
+        <label for="address">Address</label>
+        <textarea name="student_address" id="address" rows="10" cols="40"></textarea>
+        <br><br>
+        <input type="text" required value="20">
+        <input type="text" readonly value="20">
+        <input type="email" placeholder="example@gmail.com">
+        <br><br>
+        <input type="time" name="" id="">
+        <input type="week" name="" id="">
+        <input type="datetime-local" name="" id="">
+        <input type="color" name="" id="">
+        <input type="range" name="" id="">
+        <input type="button" value="">
+        <input type="file" name="" id="">
+        <input type="reset" value="">
+        
+        <button type="submit">Save</button>
+    </form>
+
+</body>
+</html>
