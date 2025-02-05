@@ -13,11 +13,11 @@ h1 {
 /* Attribute Selector */
 a[title="google"]{
     color: blue;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
 }
 
 /* ID Selector */
-#iDone{
+#idOne{
     color: brown;
 }
 
@@ -31,3 +31,35 @@ a[title="google"]{
 }
 
 /* Descendant Selector */
+
+.desc a {
+    color: rgb(94, 255, 0);
+    text-decoration: line-through;
+}
+
+.child > a {
+    color: yellowgreen;
+}
+
+/* Pseudo Selector */
+
+a:link {
+    color: red;
+}
+a:hover {
+    color: green;
+    letter-spacing: 5px;
+}
+a:active {
+    color: yellow;
+}
+a:visited {
+    color: brown;
+}
+
+/* Target */
+
+:target {
+    color: aquamarine;
+    border: 2px solid blue;
+}

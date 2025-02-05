@@ -4,6 +4,8 @@ h1 {
 }
 
 small {
+    display: block;
     color: green;
     font-size: 20px;
+    text-indent: 40px;
 }

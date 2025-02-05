@@ -1,0 +1,9 @@
+//vs code နဲ့ github နဲ့ link ချိတ် 
+- git config --global user.name "github username" 
+- git config --global user.email "github email"
+
+- git status -> git ထဲမထည့်ရသေးတဲ့ file တွေ folder တွေကို ကြည့်
+- git add . −> git ထဲထည့်မယ်လို့ပြော "." သည် မထည့်ရသေးတဲ့ file folder အားလုံးကိုပြော 
+− git status
+− git commit -m "message"  -> local repository ထဲကိုရောက်တာ 
+- git push −> Remote repository လို့ခေါ်တဲ့ github မှာသိမ်းသွားတာ 
