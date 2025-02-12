@@ -2,6 +2,8 @@
 * {
     color: red;
     font-size: 20px;
+    margin: 0;
+    padding: 0;
 }
 
 /* Tag / Element Selector */
@@ -11,13 +13,13 @@ h1 {
 }
 
 /* Attribute Selector */
-a[title="google"]{
+a[title="google"] {
     color: blue;
     letter-spacing: 5px;
 }
 
 /* ID Selector */
-#idOne{
+#idOne {
     color: brown;
 }
 
@@ -37,7 +39,7 @@ a[title="google"]{
     text-decoration: line-through;
 }
 
-.child > a {
+.child>a {
     color: yellowgreen;
 }
 
@@ -46,13 +48,16 @@ a[title="google"]{
 a:link {
     color: red;
 }
+
 a:hover {
     color: green;
     letter-spacing: 5px;
 }
+
 a:active {
     color: yellow;
 }
+
 a:visited {
     color: brown;
 }
@@ -62,4 +67,149 @@ a:visited {
 :target {
     color: aquamarine;
     border: 2px solid blue;
+}
+
+/* Border */
+
+.borderOne {
+    border: 10px dashed rgb(255, 119, 0);
+}
+
+.borderTwo {
+    border-left: 10px solid green;
+}
+
+.borderSize {
+    border-style: solid;
+    /* top / right / bottom / left */
+    border-width: 10px;
+    /* top & bottom / right & left*/
+    border-width: 10px 100px;
+    /* top / right & left / bottom */
+    border-width: 10px 50px 100px;
+    /* top / right / bottom / left */
+    border-width: 1px 5px 10px 15px;
+}
+
+.borderStyle {
+    border-style: solid dashed dotted double;
+    border-color: rebeccapurple greenyellow;
+}
+
+/* Margin */
+
+.margin {
+    border: 1px solid black;
+    margin: 100px;
+    /* margin တွင် - nagative value ရှိ */
+}
+
+/* Padding */
+
+.padding {
+    border: 1px solid red;
+    padding: 100px 10px 50px 20px;
+}
+
+/* Inline & Block */
+/* Inline element & 
+Block element များ ပြောင်းလဲချင်ရင် လွဲ‌၍ ပြောင်းလဲရေးနိုင်*/
+
+.inline {
+    border: 2px solid red;
+    width: 300px;
+    display: inline-block;
+}
+
+.block {
+    border: 2px solid black;
+    width: 300px;
+    display: inline-block;
+}
+
+/* Float */
+
+.float_left img {
+    width: 40%;
+    float: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.float_right img {
+    width: 40%;
+    float: right;
+}
+
+/* Grid */
+/* display: grid; ကြော်ညာချင်ရင်
+    grid-template-columns: ; ပါ တခါတည်း တွဲခေါ်ပေးရသည်။  */
+
+.gridOne div,
+.gridTwo div,
+.gridThree div,
+.gridFour div,
+.gridFive div,
+.gridSix div {
+    padding: 20px;
+    color: white;
+    text-align: center;
+}
+
+.gridOne,
+.gridTwo,
+.gridThree,
+.gridFour,
+.gridFive,
+.gridSix {
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.gridTwo {
+    grid-column-gap: 50px;
+}
+
+.gridThree {
+    grid-row-gap: 50px;
+}
+
+.gridFour {
+    /* all grid */
+    grid-gap: 50px;
+    /* column grid */
+    grid-column-gap: 40px;
+    /* row grid */
+    grid-row-gap: 30px;
+}
+
+.colunmadd {
+    grid-column-start: 1;
+    grid-column-end: 3;
+}
+
+.rowadd {
+    grid-column-start: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+}
+
+/* Font */
+
+.onlineFont {
+    font-family: "Oswald", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "my font";
+    src: url(Satisfy-font/Satisfy-Regular.ttf);
+}
+
+.offlineFont {
+    font-family: "my font";
 }

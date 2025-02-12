@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1a1814;
+    color: #cda45e;
+}
+
+/* Navbar */
+
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 10px;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+}
+
+.brand img {
+    width: 60px;
+    width: 60px;
+    margin: 0 15px 0 15px;
+}
+
+.brand h2 {
+    letter-spacing: 3px;
+}
+
+.nav-menu ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: end;
+    gap: 10px;
+}
+
+.nav-menu ul li {
+    list-style-type: none;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #cda45e;
+    padding: 15px;
+    font-size: 20px;
+}
+
+.nav-menu ul li a:hover {
+    color: white;
+    background-color: #cda45e;
+    border-radius: 5px;
+}
+
+/* Hero Image */
+
+.hero-container {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    background-image: url(../images/hero-image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+
+    /* For text */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hero-text {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.hero-text p {
+    margin: 20px 0;
+}
+
+.hero-text p a {
+    text-decoration: none;
+    color: white;
+}
+
+.btn {
+    display: inline-block;
+    padding: 20px 30px;
+    background-color: #cda45e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #917543;
+}
