@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+
+    <h1 id="myId">Dom <i> Selector</i></h1>
+    <p class="myClass">Class Selector 1</p>
+    <div class="myClass">Class Selector 2</div>
+    <button onclick="showData()">Click Me</button>
+
+    <script>
+        function showData(){
+            // alert ('ok');
+
+            // id selector
+            let myId = document.getElementById('myId');
+            console.log(myId);
+            console.log(myId.innerText);
+            console.log(myId.innerHTML);
+
+            // myId.innerText = `JavaScript is <i> so funny! </i>`;   element ပါလာရင် innerText ကို သုံးရင် စာအတိုင်းထုတ်ပြ innerHTML ကိုသာ သုံးရသည်...
+
+            myId.innerHTML = `JavaScript is <i> so funny! </i>`;
+
+
+            // class Selector
+            let myClass = document.getElementsByClassName('myClass');
+            console.log(myClass);
+            console.log(myClass[1]);
+            console.log(myClass[1].innerText);
+
+            // tag selector
+            let tagName = document.getElementsByTagName('p');
+            console.log(tagName);
+            console.log(tagName[0]);
+            console.log(tagName[0].innerText);
+
+            // query selector ဘုံသုံးရ class selector ( .) / id selector ( #) / tag selector
+            let querySelector = document.querySelector('.myClass');
+            console.log(querySelector);
+
+            // query selector all
+            let queryAll = document.querySelectorAll('.myClass');
+            console.log(queryAll);
+
+        }
+
+    </script>
+    
+</body>
+</html>

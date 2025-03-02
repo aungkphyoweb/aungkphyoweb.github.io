@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+</head>
+<body>
+    
+    <h1>String Lessons</h1>
+
+    <script>
+
+        // String ထဲမှာရှိတဲ့ စကားလုံး အရေအတွက် ကို သိချင်ရင် .length နဲ့ရေးနိုင်
+        let firstName = "Developer";
+        let lastName = "Kyaw Zar";
+
+        // page တွင်ပေါ်
+        document.write(firstName,lastName);
+        document.write(firstName.length);
+
+
+        // Inspect မှာပေါ် 
+        console.log(firstName,lastName);
+        console.log(firstName.length);
+
+        let fullName = firstName +' ' + lastName;
+        document.write(fullName);
+        console.log(fullName);
+
+        console.log("My name is" +' ' + fullName );
+
+        document.write(fullName + '<br>');
+
+        document.write(firstName + '<b>' + lastName + '</b><br>');
+
+        document.write(`${firstName} <b> ${lastName} </b><br>`);
+        document.write(`My name is ${fullName}. I am 29 years old.<br>` );
+
+        document.write(firstName.toUpperCase()+'<br>');
+        document.write(lastName.toLowerCase()+'<br>');
+
+
+
+    </script>
+
+</body>
+</html>

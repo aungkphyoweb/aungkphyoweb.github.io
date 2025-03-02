@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: #1a1814;
+    background-color: #22201ee9;
     color: #cda45e;
 }
 
@@ -103,4 +103,221 @@ body {
 
 .btn:hover {
     background-color: #917543;
+}
+
+/* Signature menu */
+
+.signature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 150px 70px;
+    column-gap: 50px;
+}
+
+.signature-img {
+    width: 100%;
+}
+
+.signature-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.menu-title {
+    font-size: 3em;
+    color: white;
+}
+
+.menu-about {
+    margin: 30px 0;
+    font-size: 1.3em;
+}
+
+/* About Kyaw Cafe` */
+
+.about {
+    background-image: url(../images/home-about.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+
+    /* For Text */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 50px 200px;
+}
+
+/* Special Menu */
+
+.special {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 150px 70px;
+    column-gap: 50px;
+}
+
+.special-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+}
+
+.special-img {
+    width: 100%;
+}
+
+/* Silone Tea */
+
+.silone-tea {
+    background-image: url(../images/silonetea-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.7);
+    background-blend-mode: multiply;
+
+    /* For Text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    text-align: center;
+}
+
+.silone-tea-img {
+    width: 20%;
+    margin-bottom: 20px;
+}
+
+/* Our Popular Menu */
+
+.our-menu-title {
+    font-size: 3em;
+    color: white;
+    text-align: center;
+    padding: 100px 0 50px 0;
+}
+
+.our-menu {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 20px;
+    margin: 0 70px;
+}
+
+.menu-item {
+    background-color: #26231d;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.item-img {
+    width: 100%;
+}
+
+.item-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.item-name {
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.item-price {
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 10px
+}
+
+.view-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 100px 0;
+}
+
+/* Contact us */
+
+.contact-us h1 {
+    color: white;
+    font-size: 3em;
+    text-align: center;
+    margin: 100px 0 50px 0;
+}
+
+.map {
+    margin: 0 70px;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 100px 70px;
+}
+
+.info {
+    display: flex;
+    padding: 20px 0;
+}
+
+.contact-icon {
+    position: relative;
+    background-color: #cda45e;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #1a1814;
+    border: 1px solid #ccc;
+    color: white;
+}
+
+/* Footer */
+
+.footer {
+    background-color: black;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.footer-title {
+    font-weight: bold;
+    color: antiquewhite;
+}
+
+.dev {
+    color: #cda45e;
+    text-decoration: none;
+    font-weight: bold;
 }

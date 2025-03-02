@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Array Lessons</h1>
+    <script>
+        let students = ["Mg Mg","Aung Aung","Hla Hla","Mya Mya","Aye Aye","John"];
+        console.log(students);
+
+        students.sort();
+        console.log(students);
+
+        students.reverse();
+        console.log(students);
+
+        students.sort().reverse();
+        console.log(students);
+
+        let studentStr = students.toString();
+        console.log(studentStr);
+
+        let names = "Mg Mg,Aung Aung,Hla Hla,Mya Mya,Aye Aye,John";
+
+        let nameListArray = name.split(' ');
+        console.log(nameListArray);
+
+        let arr1 = [1,2,3,4];
+        let arr2 = [5,6,7,8];
+        let arr4 = [9,10,11,12];
+        console.log(arr1);
+        console.log(arr2);
+
+        let arr3 = arr1.concat(arr2);
+        console.log(arr3);
+
+        let arr5 = [...arr1,...arr2,...arr3,...arr4];
+        console.log(arr5);
+
+    </script>
+</body>
+</html>

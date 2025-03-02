@@ -7,3 +7,25 @@
 − git status
 − git commit -m "message"  -> local repository ထဲကိုရောက်တာ 
 - git push −> Remote repository လို့ခေါ်တဲ့ github မှာသိမ်းသွားတာ 
+
+
+
+Git Basic Notes
+Step1=> github.com မှာ Github Account Register လုပ်ပါ။
+
+Git Config
+Step2=> Terminal တွင် မိမိ Project Folder location ဖွင့်ပါ။
+Step3=> git config --global user.name "mgmg" (mgmg နေရာတွင်မိမိ Git User name ထည့်ပါ။)
+Step4=> git config --global user.email "mgmg@gmail.com" (mgmg@gmail.com နေရာတွင် Github တွင် Register လုပ်ထားသော Email ထည့်ပါ။)
+
+Git Command
+Step5=> git init
+Step6=> git remote add origin clone_url (Clone Url သည် Github မှ repository ရဲ့ URL ဖြစ်သည်။)
+Step7 => git remote show origin
+Step8 => git status (Git ပေါ်မတင်ရသေးသော file အသစ်များ or ပြင်ထားသော fileများ အနီရောင်ဖြင့်ပြလိမ့်မည်။)
+Step9 => git add . (ပြင်ထားသော fileများ,file အသစ်များကို git တွင်တင်ခြင်းဖြစ်သည်။)
+Step10 => git status (file အသစ်များ or ပြင်ထားသော fileများ အစိမ်းရောင်ဖြစ်နေလိမ့်မည်။)
+Step11 => git commit -m "message" (message နေရာတွင် commit တစ်ခုခုရေးပါ)
+Step12 => git push -u origin master (Github Repo မပေါ်တင်ဖြင်းဖြစ်သည်။)
+Step13 => Github မှ User name နဲ့ Password တောင်းမည်ဖြစ်သည်။ မှန်ကန်စွာထည့်ပေးပါ။
+Notes => Github တွင်တင်ထားသောမိမိ Project တွင် မိမိစက်မှ အသစ်ထပ်ရေးထားသော Code များကို ထပ်ပေါင်းထည့်ချင်လျှင် git pull origin master ဆိုသော Command ကိုအရင် run ပြီး Step 8,9,10,11,12,13 အတိုင်းဆက်လက်လုပ်ဆောင်ပါ။

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logical Operator</title>
+</head>
+<body>
+
+    <h1>Logical Operator Lesson</h1>
+
+    <script>
+
+        // and  -> &&
+        // or   -> ||
+        // not  -> !
+
+        console.log( 12 > 10 && 3 < 2 );            // True && False && True  -> False  --->> တခုမှားနေရင် false အနေနဲ့ဘဲ ပြပေးသည် && operator ‌တွေက
+        console.log( 12 > 10 || 3 < 2 || 20 > 19 )  // True || False || True  -> False  --->> တခုမှန်နေရင် true အနေနဲ့ဘဲ ပြပေးသည် || operator ‌တွေက
+
+        if (12 > 10 && 1 < 2 && 20 > 19) {
+            document.write("Hello sis");
+        }
+
+        if (12 > 10 || 1 < 2 || 20 > 19) {
+            document.write("Hello Next");
+        }
+
+        let num;
+        if (!num) {
+            document.write("Something");
+        }
+
+    </script>
+    
+</body>
+</html>

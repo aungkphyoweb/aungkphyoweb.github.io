@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Guess Number</h1>
+    
+    <script>
+        let secretNumber = 4;
+        let guessNumber = Number(prompt(`Enter a number between 0 t0 20`));
+
+        // if (secretNumber == guessNumber) {
+        //         // correct
+        //     }
+        //     else {
+        //         // incorrect
+        //     }
+
+        while (secretNumber != guessNumber) {
+            if (secretNumber < guessNumber) {
+                alert(`Your number is lower, Try again!`);
+            }
+            else {
+                alert(`Your number is higher, Try again!`);
+            }
+            guessNumber = Number(prompt(`Enter a number between 0 t0 20`));
+        }
+        document.write(`Your correct secret number`);
+
+    </script>
+</body>
+</html>

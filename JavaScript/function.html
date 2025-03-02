@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Function Lessons</h1>
+
+    <script>
+        // Function
+        // nameing function
+
+
+        // argument/parameter function
+
+        function sum(num1 , num2){
+            document.write(`This sum result is ${num1 + num2} <br>`);
+        }
+
+        sum(3,5);
+        sum(13,15);
+
+
+        // default function
+
+        function multi(num1=10 , num2=5) {
+            document.write(`This multi result is ${num1 * num2} <br>`);
+        }
+        multi();
+        multi()
+
+        // return function
+        function resultData(num1,num2) {
+            let result = num1 + num2;
+            return result;
+        }
+
+        let finalResult = resultData(200,1213);
+        console.log(finalResult);
+
+
+    </script>
+    
+
+</body>
+</html>

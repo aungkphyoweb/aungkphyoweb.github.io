@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Looping Lessons</h1>
+    <script>
+
+        // For Looping
+
+        //for (initialExpression; condition; updateExpression) {
+        // for loop body
+        //}
+
+        for(let i=0; i < 10; i++ ){
+            document.write(`<h1>Hello World</h1>`);
+        }
+
+        let laptopLists = ['Dwll','Lenovo','Asus','Hp','Mac'];
+
+        for (let j = 0; j < laptopLists.length; j++) {
+            document.write(laptopLists[j]+'<br>');
+        }
+
+        for (let k = 1; k <= 12; k++) {
+            document.write(`<p> 13 x ${k} = ${13*k}</p>`);
+        }
+        // Home work
+        let youNumber = Number(prompt('Enter a Number'));
+
+
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+
+        for (let a = 0; a < 5; a++) {
+            for (let b = 0; b <= a; b++){
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+
+        // Home Work 
+        // *****
+        // ****
+        // ***
+        // **
+        // *
+
+        // while loop
+        // your number all
+
+//==========================================================================================
+
+        // while loop 
+
+        // while (condition) {
+        //     Code
+        //     update
+        // }
+
+        let number = Number(prompt("Enter A Number"));
+        while (number < 100) {
+            document.write(`Your Number is ${number} <br>`);
+            number += 5;
+        }
+
+//==========================================================================================
+
+        // do while
+        // do {
+        //     code
+        //     update
+        // } while (condition);
+
+        let no = 110;
+        do {
+            document.write(`Your number is = ${no} <br>`);
+
+            // update
+            no +=2;
+        } while (no < 100);
+
+
+
+
+
+
+        
+    </script>
+</body>
+</html>
