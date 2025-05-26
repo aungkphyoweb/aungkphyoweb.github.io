@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>JQuery Selector</h1>
+    <button id="click">Click</button>
+
+    <p class="jq">jQuery is Easy</p>
+    <p class="jq">jQuery is Funny</p>
+    <p class="jq">jQuery is Lightweight</p>
+
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    
+    <script>
+        // $(selector).action(call back)
+        $(document).ready(function(){
+            $("#click").click(function(){
+                alert("Hello jQuery");
+            });
+
+            $("#hide").click(function(){
+                $(".jq").hide();
+                $('#click').hide();
+                $('h1').hide();
+            });
+
+            $("#show").click(function(){
+                $(".jq").show();
+                $('#click').show();
+                $('h1').show();
+            })
+
+        })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <div id="add-student">
+        <h2>Add Student</h2>
+        Name: <input type="text" name="" id="name" width="150"><br><br>
+        Email: <input type="email" name="" id="email" width="150"><br><br>
+        Phone: <input type="number" name="" id="phone"><br><br>
+        Years: <select name="" id="year">
+            <option value="">Choose Year</option>
+            <option value="First">First Year</option>
+            <option value="Second">Second Year</option>
+            <option value="Third">Third Year</option>
+        </select><br><br>
+        <button id="add">Add Student</button>
+    </div>
+
+    <div id="update-student">
+        <h2>Update Student</h2>
+        <input type="hidden" name="" id="key">
+        Name: <input type="text" name="" id="edit_name"><br><br>
+        Email: <input type="email" name="" id="edit_email"><br><br>
+        Phone: <input type="number" name="" id="edit_phone"><br><br>
+        Years: <select name="" id="edit_year">
+            <option value="">Choose Year</option>
+            <option value="First">First Year</option>
+            <option value="Second">Second Year</option>
+            <option value="Third">Third Year</option>
+        </select><br><br>
+        <button id="update">Update Student</button>
+    </div>
+
+    <h1>Students List</h1>
+    <table border="1" cellspacing="0" cellpadding="25">
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Year</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        $(document).ready(function () {
+
+            // update student tableကို ဝှက်ထား
+            $('#update-student').hide();
+
+            // localStorage က data တွေကို tbody ထဲကို ပြချင်ရင်
+            getData();
+            function getData(){
+                let stuString = localStorage.getItem('students');
+                let stuArray = JSON.parse(stuString);
+
+                // i = key
+                // v = value
+
+                let data = '';
+                let j = 1;
+
+                $.each(stuArray, function(i,v){
+                    console.log(v);
+                    console.log(v.stu_name);
+                    let name = v.stu_name;
+                    let email = v.stu_email;
+                    let phone = v.stu_phone;
+                    let year = v.stu_year;
+
+                                    /* update လုပ်မဲ့ data တွေကို edit လုပ်ချင်ရင် data- နှင့်သယ် key မှ စ သယ် */
+
+                    data += `<tr>
+                                <td>${j++}</td>
+                                <td>${name}</td>
+                                <td>${email}</td>
+                                <td>${phone}</td>
+                                <td>${year}</td>
+                                <td>
+                                    <button class="edit" data-key="${i}" data-name="${name}" data-email="${email}" data-phone="${phone}" data-year="${year}">Edit</button>
+                                    <button class="delete" data-key="${i}">Delete</button>
+                                </td>
+                            </tr>`;
+                })
+
+                $('tbody').html(data);
+            }
+
+            $('#add').click(function () {
+                // input ထဲမှ တန်ဖိုးကို ရချင်ရင် .val ဖြင့်ရေး
+                // input က ဒေတာတွေကို လက်ခံ 
+                let name = $('#name').val();
+                let email = $('#email').val();
+                let phone = $('#phone').val();
+                let year = $('#year').val();
+                // localStorage.setItem(key,dataString) => localStorage ထဲကို data အသစ်ထည့်ရင်သုံး။ ထည့်မယ့် ဒေတာသည် string ဖြစ်ရမဉ်           
+                // localStorage.getItem(key) => localStorage ထဲက data ကို ရယူချင်ရင်သုံး 
+                // လက်ခံထားတဲ့ ဒေတာတွေကို object တည်ဆောက် 
+                let students = {
+                    stu_name: name,
+                    stu_email: email,
+                    stu_phone: phone,
+                    stu_year: year,
+                }
+                console.log(students);
+                let studentString = localStorage.getItem('students');
+                let studentArray;
+                if(studentString == null){
+                    studentArray = [];
+                }else{
+                    // JSON string ဆိုတာ object တွေ စုထည့်ထားတဲ့ array လို့မှတ်လို့ရ 
+                    // string to array ပြောင်း JSON.parse
+                    studentArray = JSON.parse(studentString);
+                }
+                // object array
+                studentArray.push(students);
+                console.log(studentArray);
+                // object array ကို string ပြောင်း JSON.stringify
+                let studentData = JSON.stringify(studentArray);
+                console.log(studentData);
+                // localStorage ထဲကိုထည့် 
+                // localStorage မှာ data တွေ သိမ်းချင်ရင် .setItem 
+                localStorage.setItem('students',studentData);
+                $('#name').val('');
+                $('#email').val('');
+                $('#phone').val('');
+                $('#year').val('');
+                getData();
+
+            });
+
+            $('tbody').on('click','.edit',function(){
+                $('#add-student').hide();
+                $('#update-student').show();
+
+                let key = $(this).data('key');
+                let name = $(this).data('name');
+                let email = $(this).data('email');
+                let phone = $(this).data('phone');
+                let year = $(this).data('year');
+
+                console.log(key,name,email,phone,year);
+
+                $('#key').val(key);
+                $('#edit_name').val(name);
+                $('#edit_email').val(email);
+                $('#edit_phone').val(phone);
+                $('#edit_year').val(year);
+            })
+
+            $('#update').click(function(){
+                let key = $('#key').val();
+                let name = $('#edit_name').val();
+                let email = $('#edit_email').val();
+                let phone = $('#edit_phone').val();
+                let year = $('#edit_year').val();
+
+                console.log(key,name,email,phone,year);
+
+                let studentString = localStorage.getItem('students');
+                if(studentString){
+                    let studentArray = JSON.parse(studentString);
+
+                    studentArray[key].stu_name = name;
+                    studentArray[key].stu_email = email;
+                    studentArray[key].stu_phone = phone;
+                    studentArray[key].stu_year = year;
+
+                    let studentData = JSON.stringify(studentArray);
+                    localStorage.setItem('students', studentData);
+
+                    getData();
+
+                    $('#add-student').show();
+                    $('#update-student').hide();
+
+                }
+
+            })
+
+            $('tbody').on('click','.delete',function(){
+                let key = $(this).data('key');
+                console.log(key);
+
+                let ans = confirm("Are you sure delete?");
+                console.log(ans);
+
+                if(ans) {
+                    let studentString = localStorage.getItem('students');
+                    if(studentString){
+                        let studentArray = JSON.parse(studentString);
+
+                        studentArray.splice(key,1) // splice(start, number)
+
+                        let studentData = JSON.stringify(studentArray);
+                        localStorage.setItem('students',studentData);
+
+                        getData();
+                    }
+                }
+            })
+
+        })
+    </script>
+</body>
+
+</html>
+
+<!-- localStorage 
+CRUD - 
+C - create
+R - read
+U - Update
+D - Delete -->

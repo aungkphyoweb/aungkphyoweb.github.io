@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        #pannel{
+            max-width: 150px;
+            padding: 50px 0;
+            background-color: rebeccapurple;
+            color: black;
+            text-align: center;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <p id="pannel">Animation</p>
+    <button id="start">Start</button>
+
+    <script>
+        $(document).ready(function(){
+            $('#start').click(function(){
+                $('#pannel').animate({left: '350px'},3000);
+                $('#pannel').animate({top: '350px'},3000);
+                $('#pannel').animate({left: '0'},3000);
+                $('#pannel').animate({top: '0'},3000);
+
+                // $('#pannel').animate({width: '100px'});
+                // $('#pannel').animate({height: '40px'});
+            })
+        })
+    </script>
+</body>
+</html>

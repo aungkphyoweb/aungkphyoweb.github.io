@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+
+    <style>
+        .welcome {
+            background-color: rebeccapurple;
+            color: white;
+            max-width: 250px;
+            padding: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <p id="heinlearn">Welcome to HeinLearn</p>
+    <input type="text" id="name">
+
+    <script>
+        $(document).ready(function(){
+            $('#heinlearn').mouseover(function(){
+                $(this).addClass('welcome');
+            });
+
+            $('#heinlearn').mouseout(function(){
+                $(this).removeClass('welcome');
+            });
+
+            $('#name').focus(function(){
+                $(this).css({'background-color':'green'});
+            });
+        })
+    </script>
+</body>
+</html>
