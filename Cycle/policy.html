@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MotoBike & Spareparts</title>
+
+  <link rel="icon" href="images/01brandLogo/dnn logo.jpg">
+
+  <!-- custom css -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+
+  <!-- icon -->
+  <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!-- Sub navbar -->
+  <div class="bg-body-tertiary text-danger">
+    <div class="container py-1">
+      <div class="row">
+        <div class="col-6 col-md-9">
+          <small>
+            <span class="me-3 d-none d-md-inline-block"><i class="fa-solid fa-location-dot me-1 text-dark"></i>Mandalay,
+              46/47 111Street</span>
+            <span><i class="fa-solid fa-square-phone me-1 text-dark"></i>09793977092</span>
+          </small>
+        </div>
+        <div class="col-6 col-md-3 text-end">
+          <small>
+            Follow Us :
+            <a href="https://www.facebook.com/aungkyawphyoe" target="_blank" class="ms-2 text-primary"><i
+                class="fa-brands fa-square-facebook"></i></a>
+            <a href="https://conf.viber.com/B3YxFUtyuue9I6REQozb_w" target="_blank" class="ms-2 text-danger"><i
+                class="fa-brands fa-viber"></i></a>
+            <a href="https://www.tiktok.com/@aunhmaung?_t=ZS-8wG8ypLjxyB&_r=1" target="_blank"
+              class="ms-2 text-black"><i class="fa-brands fa-tiktok"></i></a>
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ================================================================================================= -->
+
+  <!-- Navigation bar -->
+  <nav class="navbar navbar-expand-lg sticky-top bg-white border-bottom">
+    <div class="container">
+      <a class="navbar-brand me-5" href="#">
+        <img src="images/01brandLogo/akplogo.jpg" alt="" width="150" height="50">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navBar">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-5">
+          <li class="nav-item pe-2">
+            <a class="nav-link " aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item pe-2">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item pe-2">
+            <a class="nav-link" href="brand.html">Brands / Products</a>
+          </li>
+          <li class="nav-item pe-2">
+            <a class="nav-link" href="category.html">Categories</a>
+          </li>
+          <li class="nav-item dropdown pe-2">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">Features</a>
+            <ul class="dropdown-menu shadow border-danger">
+              <li><a class="dropdown-item " href="service.html">Service</a></li>
+              <li><a class="dropdown-item" href="local.html">Location</a></li>
+              <li><a class="dropdown-item " href="contact.html">Contact</a></li>
+              <li><a class="dropdown-item nav_active" href="cart.html">Cart</a></li>
+
+            </ul>
+          </li>
+          <!-- login -->
+          <li class="nav-item position-relative">
+            <button class="nav-link" id="loginToggleBtn">
+              <i class="fas fa-user ms-2"></i> <!-- Register Icon -->
+            </button>
+            <div id="loginPopover" class="card shadow position-absolute top-100 start-0 mt-2 p-3 d-none"
+              style="width: 400px; z-index: 1050;">
+              <!-- Tabs -->
+              <ul class="nav nav-tabs mb-3" id="formTabs">
+                <li class="nav-item">
+                  <button class="nav-link active" id="showLoginTab">Login</button>
+                </li>
+                <li class="nav-item">
+                  <button class="nav-link" id="showRegisterTab">Register</button>
+                </li>
+              </ul>
+
+              <!-- Login Form -->
+              <form id="loginForm">
+                <input type="email" placeholder="Enter your email" class="form-control mb-2">
+                <input type="password" placeholder="Password" class="form-control mb-2">
+                <div class="form-check mb-3">
+                  <input type="checkbox" class="form-check-input" id="rememberLogin">
+                  <label class="form-check-label" for="rememberLogin">Remember me</label>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Login</button>
+              </form>
+
+              <!-- Register Form -->
+              <form id="registerForm" class="d-none">
+                <input type="text" placeholder="Enter your name" class="form-control mb-2">
+                <input type="email" placeholder="Enter your email" class="form-control mb-2">
+                <input type="password" placeholder="Password" class="form-control mb-2">
+                <input type="password" placeholder="Confirm Password" class="form-control mb-3">
+                <div class="form-check mb-3">
+                  <input type="checkbox" class="form-check-input" id="receiveOffers">
+                  <label class="form-check-label text-danger" for="receiveOffers">I'd like to receive exclusive
+                    offers</label>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Register</button>
+              </form>
+            </div>
+          </li>
+        </ul>
+        <!-- Search Button and Hidden Box -->
+        <div class="position-relative d-inline-block ms-4">
+          <!-- Trigger Button -->
+          <button id="searchBtn" class="btn btn-outline-danger">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+
+          <!-- Hidden Search Form -->
+          <div id="searchBox" class="position-absolute mt-2 p-3 bg-white border rounded shadow d-none"
+            style="min-width: 280px; z-index: 999;">
+            <form class="d-flex" action="/search" method="GET">
+              <input type="text" name="q" class="form-control me-2" placeholder="Search product..." required>
+              <a href="brand.html" class="btn btn-danger">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </form>
+          </div>
+        </div>
+        <!-- cart -->
+        <ul class="navbar-nav ms-5 ms-md-4 ms-lg-0">
+          <li class="nav-item text-warning ">
+            <a class="nav-link" href="#">
+              <i class="fa-regular fa-heart my-3 ms-3 me-2"></i>
+            </a>
+          </li>
+          <li class="nav-item text-warning"><a class="nav-link" href="cart.html"><i
+                class="fa-solid fa-cart-shopping mt-3"></i><small class="cart_noti">3</small></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- ================================================================================================= -->
+
+  <!-- our policy -->
+  <section class="py-5 bg-white">
+    <div class="container">
+      <h2 class="fw-bold text-center mb-4">Our Store Policies</h2>
+      <p class="text-center text-muted mb-5" style="max-width: 750px; margin: auto;">
+        We value our customers and are committed to providing transparent and fair policies regarding your purchases, data, and service experience.
+      </p>
+  
+      <div class="row g-4">
+        <!-- Return Policy -->
+        <div class="col-md-4">
+          <div class="bg-light p-4 rounded shadow-sm h-100">
+            <h5 class="fw-bold mb-2"><i class="fas fa-undo-alt me-2 text-danger"></i>Return Policy</h5>
+            <p class="text-muted mb-0">
+              Items can be returned within 7 days of purchase with a valid receipt. Products must be unused and in original packaging.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Shipping Policy -->
+        <div class="col-md-4">
+          <div class="bg-light p-4 rounded shadow-sm h-100">
+            <h5 class="fw-bold mb-2"><i class="fas fa-shipping-fast me-2 text-danger"></i>Shipping Policy</h5>
+            <p class="text-muted mb-0">
+              We offer delivery across Myanmar within 2–5 business days. Free shipping is available on orders over 100,000 MMK.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Privacy Policy -->
+        <div class="col-md-4">
+          <div class="bg-light p-4 rounded shadow-sm h-100">
+            <h5 class="fw-bold mb-2"><i class="fas fa-user-shield me-2 text-danger"></i>Privacy Policy</h5>
+            <p class="text-muted mb-0">
+              Your personal data is secure with us. We do not share or sell customer information to third parties without consent.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- ================================================================================================= -->
+
+  <!-- ================================================================================================= -->
+
+  <!-- ================================================================================================= -->
+
+  <!-- ================================================================================================= -->
+
+  <!-- ================================================================================================= -->
+
+  <!-- ================================================================================================= -->
+
+  <!-- ================================================================================================= -->
+
+  <!-- ================================================================================================= -->
+
+  <!-- ================================================================================================= -->
+
+  <!-- ================================================================================================= -->
+
+  <!-- ================================================================================================= -->
+
+  <!-- Footer -->
+  <footer class="bg-light text-dark border-top">
+    <div class="container mt-5">
+      <div class="row justify-content-center text-center text-md-start g-4">
+
+        <div class="col-6 col-md-4 col-lg-2 ">
+          <h6 class="fw-bold mb-3">Follows</h6>
+          <ul class="social-list">
+            <li>
+              <a href="https://facebook.com">
+                <i class="fab fa-facebook-f" style="color: #1877F2;"></i>
+                <span>Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com">
+                <i class="fab fa-twitter" style="color: #1DA1F2;"></i>
+                <span>Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com">
+                <i class="fab fa-instagram" style="color: #E4405F;"></i>
+                <span>Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://linkedIn.com">
+                <i class="fab fa-linkedin-in" style="color: #0A66C2;"></i>
+                <span>LinkedIn</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2 ">
+          <h6 class="fw-bold mb-3">Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-decoration-none text-dark">Home</a></li>
+            <li><a href="about.html" class="text-decoration-none text-dark">About</a></li>
+            <li><a href="brand.html" class="text-decoration-none text-dark">Brand / Products</a></li>
+            <li><a href="category.html" class="text-decoration-none text-dark">Categories</a></li>
+            <li><a href="cart.html" class="text-decoration-none text-dark">Order</a></li>
+          </ul>
+        </div>
+
+        <div class="col-6 col-md-4 col-lg-2 ">
+          <h6 class="fw-bold mb-3">Help & Info Help</h6>
+          <ul class="menu-list list-unstyled">
+            <li class="menu-item mb-1">
+              <a href="cart.html">Track Your Order</a>
+            </li>
+            <li class="menu-item mb-1">
+              <a href="policy.html">Returns Policies</a>
+            </li>
+            <li class="menu-item mb-1">
+              <a href="service.html">Shipping + Delivery</a>
+            </li>
+            <li class="menu-item mb-1">
+              <a href="contact.html">Contact Us</a>
+            </li>
+            <li class="menu-item mb-1">
+              <a href="contact.html">Faqs</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- <div class=" ">
+          <h6 class="fw-bold mb-3">Contact</h6>
+          <ul class="contact-list">
+            <li>
+              <i class="fas fa-phone fa-1x" style="color: #dc3545;"></i>
+              <a href="tel:+95793977092">09-793-977-092</a>
+            </li>
+            <li>
+              <i class="fas fa-phone fa-1x" style="color: #dc3545;"></i>
+              <a href="tel:+95941829830">09-941-829-830</a>
+            </li>
+            <li>
+              <i class="fas fa-envelope" style="color: #dc3545;"></i>
+              <a href="mailto:dnn@gmail.com"> ,</a>
+            </li>
+            <li>
+              <a href="mailto:aungkyaw@gmail.com">aungkyaw@gmail.com</a>
+            </li>
+          </ul>
+        </div> -->
+
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="footer-menu contact-item">
+            <h5 class="widget-title text-capitalize pb-2">Contact Us</h5>
+            <p>Do you have any queries or suggestions? <a href="mailto:" class="text-decoration-none">dnn@motorparts.com</a>
+            </p>
+            <p>If you need support? Just give us a call. <br> <a href="#"
+                class="text-decoration-none">09-793-977-092</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center">
+        <ul class="list-unstyled ">
+          <li><span class="fw-bold m-3">Location ;</span><i class="fa-solid fa-location-dot fa-1x me-3 "
+              style="color: #dc3545;"></i>46/47 * 111 Street ,
+            Mandalay / Ngazun Township, Nyat Kyee , Kyee Kone</li>
+        </ul>
+      </div>
+
+      <div id="footer-bottom" class="text-center border-top py-3">
+        <div class="container">
+          <div class="d-flex flex-wrap justify-content-center ">
+
+            <div class="copyright px-3">
+              <small class="text-muted">&copy; 2025 Design by <span class="text-danger">&hearts;</span> <strong
+                  class="text-primary">AungKyaw</strong></small>
+              </p>
+            </div>
+
+            <div class="vr d-none d-sm-inline-flex"></div>
+
+            <div class="ship-and-payment d-flex gap-md-5 flex-wrap px-3">
+              <div class="payment-method d-flex">
+                <div class="card-wrap ps-2">
+                  <i class="fa-brands fa-google-pay fa-lg me-2" style="color: #dc3545;"></i>
+                  <i class="fab fa-cc-visa fa-lg me-2" style="color: #1a1f71;"></i>
+                  <i class="fab fa-cc-mastercard fa-lg me-2" style="color: #eb001b;"></i>
+                  <i class="fab fa-cc-paypal fa-lg me-2" style="color: #003087;"></i>
+
+                  <img src="images/01brandLogo/kpay_or_cb.png" alt="KBZ Pay" style="height: 45px;">
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================================================================================================= -->
+
+  <!-- javascript -->
+
+  <script src="js/jquery.min.js" type="text/javascript"></script>
+  <script src="js/slick.js"></script>
+
+  <!-- bootstrap -->
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- icon -->
+  <script src="fontawesome/js/all.min.js"></script>
+
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
